@@ -53,7 +53,7 @@ export default function Form({ dispatch, state }: FormProps) {
         <form className="space-y-5 bg-white shadow p-10 rounded-lg" onSubmit={ handleSubmit }>
             <div className="grid grid-cols-1 gap-3">
                 <label htmlFor="category" className="font-bold">Categor&iacute;a</label>
-                <select className="border border-slate-300 p-2 rounded-lg w-full bg-white" id="category" onChange={ handleChange }>
+                <select className="border border-slate-300 p-2 rounded-lg w-full bg-white" id="category" value={activity.category} onChange={ handleChange }>
                     {
                         categories.map(category => (
                             <option key={category.id} value={category.id}>
